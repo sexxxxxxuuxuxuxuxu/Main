@@ -141,17 +141,12 @@ while True:
                     stop_loss = round(current_price * 1.025, 2)
 
                 message = (
-                    f"[SIGNAL - {trend.upper()}]"
-"
-                    f"Цена: ${current_price}
-" +
-                    "
-".join(f"- {sig}" for sig in signals) +
-                    f"
-
-Take Profit: ${take_profit}
-Stop Loss: ${stop_loss}"
-                )
+    f"[SIGNAL - {trend.upper()}]\n"
+    f"Цена: {current_price}\n"
+    + "\n".join(f"- {sig}" for sig in signals) + "\n"
+    f"Take Profit: {take_profit}\n"
+    f"Stop Loss: {stop_loss}"
+)
                 send_message(message)
                 print(">>> Сигнал изпратен в Telegram")
 
