@@ -141,7 +141,7 @@ while True:
                     stop_loss = round(current_price * 1.025, 2)
 
                 message = (
-                    f"[SIGNAL - {trend.upper()}]
+                    f"[SIGNAL - {trend.upper()}]"
 "
                     f"Цена: ${current_price}
 " +
